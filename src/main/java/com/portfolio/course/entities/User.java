@@ -25,7 +25,7 @@ public class User implements Serializable {
 	private String email;
 	private String phone;
 	private String password;
-	
+
 	@JsonIgnore
 	@OneToMany(mappedBy = "client")
 	private List<Order> orders = new ArrayList<>();
@@ -85,7 +85,6 @@ public class User implements Serializable {
 	public List<Order> getOrders() {
 		return orders;
 	}
-
 
 	@Override
 	public int hashCode() {
